@@ -1,0 +1,104 @@
+//**********************************
+//**********************************
+//
+//      Website
+//      Programmer:
+//      Design Team:
+//      Date Created:
+// 
+//**********************************
+//  Date Modified       Reason /Changes
+// 
+//**********************************
+// 
+//      Variables Declarations
+// 
+//**********************************
+// 
+//***Colour Variables
+//
+$clr-pri: #910000;
+$clr-pri-comp: #00b834;
+$clr-sec: #fff133;
+$clr-sec-comp: #572cb8;
+$clr-txt-drk: #494947;
+$clr-txt-lgt: #eee;
+// 
+//*********************************
+//*********************************
+// 
+//****** Parent Configuration
+// 
+
+.parent { // (0,0,1,0)
+    margin: 0 auto;
+    width: 90vw;
+    height: 80vh;
+    background-color: darken($clr-pri, 10%);
+
+    // Setup Grid Container
+    display: grid;
+
+    // Setup Grid Template
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr repeat(3, 2fr);
+    grid-gap: 5px;
+
+    // Configure Children Elements
+    .children { // (0,0,1,0)
+        padding: 10px;
+        color: $clr-txt-drk;
+        //width: 1fr;
+        font-weight: bolder;
+        background-color: $clr-sec;
+
+        // Configure Navigation Element
+        .navigation { // (0,0,1,0)
+            list-style: none;
+
+            //Setup Flex Container
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        // Configure Navigation Items
+        .items { //(0,0,1,0)
+            background-color: $clr-sec-comp;
+            margin-right: 15px;
+            width: 125px;
+            font-size: .75rem;
+            padding: 2px 0;
+            border-radius: 20px;
+            text-align: center;
+
+            // Conifgure Items/Links
+            a { // (0,0,0,1)
+                text-decoration: none;
+                color: $clr-txt-lgt;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    // Configure Individual Elements (layout)
+    .child2 { //(0,0,1,0)
+        grid-row: 1 / 2;
+        grid-column: 2 / 5;
+    }
+
+    .child3 { //(0,0,1,0)
+        grid-row: 2 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .child4 { //(0,0,1,0)
+        grid-row: 2 / 3;
+        grid-column: 2 / 5;
+    }
+
+    .child8 { //(0,0,1,0)
+        grid-row: 4 / 5;
+        grid-column: 1 / 4;
+    }
+}

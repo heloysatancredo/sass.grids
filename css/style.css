@@ -1,0 +1,60 @@
+.parent {
+  margin: 0 auto;
+  width: 90vw;
+  height: 80vh;
+  background-color: #5e0000;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr repeat(3, 2fr);
+  grid-gap: 5px;
+}
+
+.parent .children {
+  padding: 10px;
+  color: #494947;
+  font-weight: bolder;
+  background-color: #fff133;
+}
+
+.parent .children .navigation {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.parent .children .items {
+  background-color: #572cb8;
+  margin-right: 15px;
+  width: 125px;
+  font-size: .75rem;
+  padding: 2px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.parent .children .items a {
+  text-decoration: none;
+  color: #eee;
+  display: inline-block;
+  width: 100%;
+}
+
+.parent .child2 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 5;
+}
+
+.parent .child3 {
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+}
+
+.parent .child4 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 5;
+}
+
+.parent .child8 {
+  grid-row: 4 / 5;
+  grid-column: 1 / 4;
+}
